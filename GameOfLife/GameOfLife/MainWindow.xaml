@@ -1,0 +1,33 @@
+﻿<Window x:Class="GameOfLife.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GameOfLife"
+        mc:Ignorable="d"
+        Title="John Conway's Game of Life" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Viewbox Grid.Row="0">
+            <Grid Name="grid" />
+        </Viewbox>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
+            <TextBlock Text="Speed (ms): " FontSize="20"/>
+            <local:NumericUpDown x:Name="speed"/>
+            <Button Content="Invisible Button" FontSize="3" Opacity="0"/>
+            <Button Name="startBtn" Click="Start_Click" Content="Start" Width="70" Height="35" FontSize="20"/>
+            <Button Content="Invisible Button" FontSize="3" Opacity="0"/>
+            <Button Name="stopBtn" Click="Stop_Click" Content="Stop" Width="70" Height="35" FontSize="20"/>
+            <Button Content="Invisible Button" FontSize="3" Opacity="0"/>
+            <Button Name="nextBtn" Click="Next_Click" Content="Next" Width="70" Height="35" FontSize="20"/>
+            <Button Content="Invisible Button" FontSize="3" Opacity="0"/>
+            <Button Name="resetBtn" Click="Reset_Click" Content="Reset" Width="70" Height="35" FontSize="20"/>
+            <Button Content="Invisible Button" FontSize="3" Opacity="0"/>
+            <TextBlock Name="msg" Foreground="Red" FontSize="15"/>
+        </StackPanel>
+        
+    </Grid>
+</Window>
